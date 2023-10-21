@@ -144,6 +144,7 @@ body{
     text-align: center;
     
 }
+
 .header_logo_lonk{
     width: 35px;
     margin: 25px;
@@ -152,10 +153,14 @@ body{
 }
 
 .logo_profcom{
-    width: 68px;
-    height: 68px;
-    margin-right: 20px;
+    width: 162px;
+    height: 93px;
 }
+
+.logo_sgtu{
+    margin-left: 86px;
+}
+
 /*Меню. При наведении на кнопки */
 .header_link:hover, .header_link:focus,.header_link:active{
     color:rgba(0, 97, 199, 1);
