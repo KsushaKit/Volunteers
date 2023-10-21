@@ -61,6 +61,14 @@ body{
 
 }
 
+.navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.link_fon {
+    justify-content: flex-end;
+}
+
 /* Привью. контейнеры главной страницы */
 .parallax{
     display: flex;

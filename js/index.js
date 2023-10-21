@@ -4,9 +4,9 @@ const feedbackComment = document.querySelector("#feedback-comments");
 const serverURL = 'http://localhost:3001/api';
 const month = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"]
 
-const feedbacks = axios.get(serverURL + "/feedback/")
-.then(res=>feedbackList(res.data))
-.catch(err=>(console.log(err),alert(err)));
+// const feedbacks = axios.get(serverURL + "/feedback/")
+// .then(res=>feedbackList(res.data))
+// .catch(err=>(console.log(err),alert(err)));
 
 const feedbackList = (data) => {
     data.forEach(feed => {
