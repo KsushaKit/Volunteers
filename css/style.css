@@ -423,7 +423,7 @@ body{
     position: relative;
     background:#EAF4FF ;
     box-shadow: 5px 4px 4px 0px rgb(0 97 199 / 29%);
-    margin: 15px;
+    margin: 15px 50px;
     margin-top: 25px;
     border-radius: 2px;
     cursor: pointer;
@@ -631,6 +631,39 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: 151%;
+}
+
+/* дополнение для новых окон */
+
+.modal_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 30px 20px;
+}
+
+.filling_wrapper {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.form_text{
+    width: 140%;
+    padding-right: 10px;
+}
+
+.form_gallery img{
+    height: 100%;
+}
+
+/* слайдеры в модальных окнах */
+
+.swiper{
+    width: 1000px;
+    height: 200px;
+}
+.swiper-slide img{
+    height: 200px;
 }
 /* новости */
 .container-news{

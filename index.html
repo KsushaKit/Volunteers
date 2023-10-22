@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./css/request.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/unpkg.com_swiper@9.4.1_swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Профком</title>
 </head>
@@ -176,14 +180,18 @@
         </section>
 
         <section id="types_help" class="parallax_about col-12">
+
             <div class="container-about col-md-9 col-sm-12">
                 <div class="helps_title col-md-9 col-sm-12">
                     <div class="blue_line"></div>
-                    <h2 class="title_item">Виды помощи</h2>
+                    <h2 class="title_item">На базе штаба Вы можете получить:</h2>
                 </div>
+
+
                 <div class="help_cards col-md-6 col-sm-12">
-                    <a href="./help.html" class="card_fon col-lg-5 col-md-12 col-sm-12">
-                        <div class="card_text">
+
+                    <div class="card_fon col-lg-5 col-md-12 col-sm-12">
+                        <div data-modal-btn="popup2" class="card_text">
                             <div class="help_text_item col-md-5">Адресная помощь</div>
                             <img class="header_logo_lonk" src="./img/адресная помощь.png" alt="адресная помощь">
                         </div>
@@ -191,27 +199,127 @@
                             <button class="button_card_disign">Подробнее</button>
                         </div> -->
                        
-                    </a>    
-                    <a href="./help.html" class="card_fon col-lg-5 col-md-12 col-sm-12">
+                    </div>    
+                    <div data-modal-btn="popup3" class="card_fon col-lg-5 col-md-12 col-sm-12">
                         <div class="card_text">
                             <div class="help_text_item col-md-5">Психологическая помощь</div>
                             <img class="header_logo_lonk" src="./img/психологическая помощь.png" alt="психологическая помощь">
                         </div>                     
-                    </a>    
-                    <a href="./help.html" class="card_fon col-lg-5 col-md-12 col-sm-12">
+                    </div>   
+
+                    <div data-modal-btn="popup4" class="card_fon col-lg-5 col-md-12 col-sm-12">
                         <div class="card_text">
                             <div class="help_text_item col-md-5">Гуманитарная помощь</div>
                             <img class="header_logo_lonk" src="./img/гуманитарная помощь.png" alt="гуманитарная помощь">
                         </div>
-                    </a>        
-                    <a href="./help.html" class="card_fon col-lg-5 col-md-12 col-sm-12"> 
+                    </div>
+                    
+                    <!-- <a href="./help.html" class="card_fon col-lg-5 col-md-12 col-sm-12"> 
                         <div class="card_text">
                             <div class="help_text_item col-md-5">Иная помощь</div>
                             <img class="header_logo_lonk" src="./img/иная помощь.png" alt="иная помощь">
                         </div>                        
-                    </a>    
+                    </a>     -->
+
                 </div>
-            </div>                
+            </div>
+            
+            <!-- модальное окно 1 -->
+            <div data-modal-window="popup2" class="modal_comment">
+                <div class="modal_content col-md-6 col-sm-12">
+
+                    <div class="modal_wrapper">
+                        <div class="modal_inner">
+                            <div class="modal_title">Адресная (бытовая) помощь</div>
+                            <div class="close_modal_window">&times;</div>
+                        </div>
+                        <div class="filling_wrapper">
+
+                            <div class="form_text">
+                                Волонтеры добровольческого штаба #МЫВМЕСТЕ на базе СГТУ имени Гагарина Ю.А. окажут Вам помощь в быту (приготовление пищи, уборка территории). 
+                            </div>
+                            
+                            <!-- Слайдер -->
+                            <div class="swiper slider1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/photo_4.jpeg"></div>
+                                    <div class="swiper-slide"><img src="./img/photo_1.jpeg"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+
+            <!-- модальное окно 2 -->
+            <div data-modal-window="popup3" class="modal_comment">
+                <div class="modal_content col-md-6 col-sm-12">
+
+                    <div class="modal_wrapper">
+                        <div class="modal_inner">
+                            <div class="modal_title">Психологическая помощь</div>
+                            <div class="close_modal_window">&times;</div>
+                        </div>
+                        <div class="filling_wrapper">
+
+                            <div class="form_text">
+                                Если у вас наблюдаются перечисленные симптомы, тревожное и депрессивное состояние, невротическое состояние, подавленное и угнетенное состояние, апатия, депрессия, стресс и развитие навыков саморегуляции, работа с различными видами страха, обращайтесь к психологам СГТУ имени Гагарина Ю.А.. 
+                            </div>
+                            
+                            <!-- Слайдер -->
+                             <div class="swiper slider2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/photo_4.jpeg"></div>
+                                    <div class="swiper-slide"><img src="./img/photo_1.jpeg"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                                                        
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+             <!-- модальное окно 3 -->
+             <div data-modal-window="popup4" class="modal_comment">
+                <div class="modal_content col-md-6 col-sm-12">
+
+                    <div class="modal_wrapper">
+                        <div class="modal_inner">
+                            <div class="modal_title">Гуманитарная помощь</div>
+                            <div class="close_modal_window">&times;</div>
+                        </div>
+                        <div class="filling_wrapper">
+
+                            <div class="form_text">
+                                Если Вы нуждаетесь в гуманитарной помощи - мы предоставим одежду, а если у вас есть вещи или продукты и т.п., и вы готовы поделиться, ждем вас по адресу ул. Политехническая д. 77 с 9:00 до 18:00 с понедельника по пятницу.
+                            </div>
+                            
+                            <!-- Слайдер -->
+                             <div class="swiper slider3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/photo_4.jpeg"></div>
+                                    <div class="swiper-slide"><img src="./img/photo_1.jpeg"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                                                        
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
         </section>
         <section id="reviews" class="parallax_comment col-12">
             <div class="container-help col-md-9 col-sm-12">

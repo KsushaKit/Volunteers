@@ -1,3 +1,4 @@
+
 // слайдер для отзывов
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
@@ -53,3 +54,29 @@ window.onclick = function(el) {
         }
     }
 }
+
+//3 слайдера в модальных окне
+//!!!ПЕРЕЛИСТЫВАЮТСЯ ВСЕ СЛАЙДЕРЫ ОДНОВРЕМЕННО
+var swiper = new Swiper(".slider1", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiper = new Swiper(".slider2", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiper = new Swiper(".slider3", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+
+
