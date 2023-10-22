@@ -78,7 +78,7 @@ body{
 }
 
 .paralax-content{
-    height: 100vh;
+    height: 105vh;
 }
 
 .overlay{
@@ -212,7 +212,13 @@ body{
     }
 }
 /* форма для заявки */
+
+.text_inform{
+    width: 40% !important;
+    padding-right: 5%;
+}
 .application{
+    width: 60% !important;
     padding: 20px;
     background-color:  #EAF4FF;
     border-radius: 2px;
@@ -221,6 +227,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:left;
+}
+.form-input{
+    display: flex;
 }
 @media(max-width:1200px) {
     .container-about{
@@ -269,8 +278,41 @@ body{
 #application_form li{
     list-style-type: none;
 }
-#application_form input, #application_form textarea{
+
+#application_form label{
+    font-size: 18px;
+}
+
+.input-text{
+    height: 40px;
+    width: 290px;
     margin: 5px;
+    font-size: 18px;
+}
+
+.input-text::placeholder{
+    font-size: 18px;
+}
+
+#application_form select{
+    height: 40px;
+    width: 290px;
+    margin: 1.5% 0 0 2%;
+    background: inherit;
+    font-size: 18px;
+}
+
+#application_form textarea{
+    width: 595px;
+}
+
+.input-checkbox{
+    height: 20px;
+    width: 20px;
+}
+
+.input-checkbox-text{
+    font-size: 18px;
 }
 
 #button-applecation{

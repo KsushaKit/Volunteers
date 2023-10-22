@@ -69,29 +69,46 @@
                             <div class="text_inform col-md-6 col-sm-12">
                                 <p>
                                     Иногда помощь приходит оттуда, откуда её не ждешь!
+                                    <p></p>
                                     Обратись за помощью!
                                 </p>
                             </div>
+
+                            <!-- ФОРМА ЗАЯВКИ -->
                             <div class="application col-md-6 col-sm-12">
                                 <h3 class="title_application">Оставить заявку</h3>
                                 <h3 class="title_application_2">Заявка на помощь</h3>
                                 <form id="application_form" class="guest_request_form">
-                                    <li>
-                                        <li><label for="Фамилия">Укажите своё имя</label></li>
-                                        <li><input type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Имя" placeholder="имя" id="name_guest_request" required>
-                                            <input type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Фамилия" id="family_guest_request" placeholder="фамилия" required>
-                                        </li>
-                                    </li>
+                                    <div class="form-input">
+                                        <div>
+                                            <label for="Фамилия">Укажите своё имя</label>
+                                            <input class="input-text" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Имя" placeholder="имя" id="name_guest_request" required>
+                                        </div>
+                                        <div>
+                                            <label for="Фамилия">Укажите свою фамилию</label>
+                                            <input class="input-text" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Фамилия" id="family_guest_request" placeholder="фамилия" required>
+                                        </div>
+                                    </div>
                                     <p></p>
-                                    <li>
-                                        <li><label for="phone">Номер телефона</label></li>
-                                        <li><input type="tel" id="phone_guest_request" name="phone"  placeholder="номер телефона" required></li>
-                                    </li>
+                                    <div class="form-input">
+                                        <div style="width: 58%">
+                                            <label for="phone">Номер телефона</label>
+                                            <input class="input-text" type="tel" id="phone_guest_request" name="phone"  placeholder="номер телефона" required>
+                                        </div>
+                                        <div>
+                                            <label for="phone">Вид помощи</label>
+                                            <select>
+                                                <option>Адресная</option>
+                                                <option>Гуманитарная</option>
+                                                <option>Психологическая</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <p></p>
                                     <li>
                                         <li><label for="comment">Комментарий:</label></li>
                                         <li><textarea name="comment" id="comment_body_guest_request" pattern="^[А-Яа-яЁё\s]+$"></textarea></li>
-                                        <li><input type="checkbox" name="agree" id="agree_guest_request" required> Согласен на обработку персональных данных</li>
+                                        <li class="input-checkbox-text"><input class="input-checkbox" type="checkbox" name="agree" id="agree_guest_request" required> Согласен на обработку персональных данных</li>
                                     </li> 
                                     <p></p>
                                     <li>
@@ -99,6 +116,8 @@
                                     </li>     
                                 </form>
                             </div>
+
+
                         </div>    
                     </div>
                 </div>
