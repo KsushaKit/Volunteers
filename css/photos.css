@@ -1,0 +1,652 @@
+@font-face {
+    font-family: 'Raleway regular';
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+    font-family: 'Raleway medium';
+    src: url("../fonts/Raleway-Medium.ttf");
+}
+@font-face {
+    font-family: 'Raleway bold';
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+@font-face {
+    font-family: 'Raleway extrabold';
+    src: url("../fonts/Raleway-ExtraBold.ttf");
+}
+html{
+    box-sizing: border-box; 
+    -webkit-text-size-adjust: 100%;  
+    -ms-text-size-adjust: 100%; 
+    -moz-text-size-adjust: 100%;
+    line-height: 1;
+    height: 100%;
+    width: 100%;
+    
+}
+::placeholder{
+    color: rgba(40, 86, 134, 1);
+    font-size: 13px;
+    font-family: "Raleway regular";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+ }
+input, textarea{
+    background-color: rgba(234, 244, 255, 1);
+    border: 1px solid #87B5E5;
+}
+label,.checkbox_agree{
+    color: #000;
+    font-size: 15px;
+    font-family: "Raleway medium";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+}
+
+body{
+    position: relative;
+    font-family: 'Основной'; 
+    font-size: 16px;
+    line-height: 1.2;
+    color: black;
+
+}
+
+.navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+/* Привью. контейнеры главной страницы */
+.parallax{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-image: url(../img/счастливые\ люди\ .png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.paralax-content{
+    height: 105vh;
+}
+
+.overlay{
+    background: rgba(33, 33, 33, 0.75);
+    height: 100%;
+}
+
+
+/* менюшка */
+.header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header_wrapper{
+    max-width: 1200px;
+    height: 165px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.header_item:nth-child(2) {
+    margin-right: 0px;
+}
+
+.menu_list{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.link_fon{
+    width: 164px;
+    height: 48px;
+    opacity: 0.9;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header_item{
+    margin-right: 48px;
+    list-style-type:none;
+}
+
+.header_item:last-child{
+    margin-right: 0px;
+}   
+
+.header_link{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Raleway bold';
+    line-height: 130%;  
+    text-decoration: none;
+        
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.header_logo_lonk{
+    width: 35px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo_profcom {
+    width: 108px;
+    height: 38px;
+}
+
+.logo_sgtu{
+    margin-left: 86px;
+}
+
+/*Меню. При наведении на кнопки */
+.header_link:hover, .header_link:focus,.header_link:active{
+    color:rgba(0, 97, 199, 1);
+    
+}
+/* если нужен будет фон */
+/* .link_fon:hover, .link_fon:focus,.link_fon:active{
+    
+    background-color:rgba(217, 217, 217, 0.5) ;
+
+} */
+
+/*Это всё еще привью  */
+
+.parallax-container {
+    display: flex;
+    max-width: 56%;
+}
+.parallax-conteiner-title {
+   font-family: 'Raleway extrabold';
+   padding-top: 40px;
+   color:rgb(255, 255, 255);
+}
+.parallax-conteiner-text{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    padding-top: 20px;
+}
+@media(max-width:710px) {
+    .parallax-conteiner-text{
+       display: flex;
+       flex-direction: column;
+    }
+    .parallax-conteiner-title{
+        padding-top: 50px;
+    }
+}
+.text_inform{
+    font-family: 'Raleway bold';
+    padding-right: 10px;
+    font-size: 20px;
+}
+@media(max-width:800px) {
+    .text_inform{
+        font-family: 'Raleway bold';
+        padding-right: 10px;
+        font-size: 14px;
+    }
+}
+/* форма для заявки */
+
+.text_inform{
+    width: 40% !important;
+    padding-right: 5%;
+}
+.application{
+    width: 60% !important;
+    padding: 20px;
+    background-color:  #EAF4FF;
+    border-radius: 2px;
+}
+.container-about{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+}
+.form-input{
+    display: flex;
+}
+@media(max-width:1200px) {
+    .container-about{
+        margin-top: 100px;
+    }
+}
+@media(max-width:670px) {
+    .container-about{
+        margin-top: 200px;
+    }
+}
+@media(max-width:475px) {
+    .container-about{
+        margin-top: 200px;
+    }
+}
+@media(max-width:380px) {
+    .container-about{
+        margin-top: 350px;
+    }
+}
+.title_application{
+    color: #000;
+    text-align: center;
+    font-size: 23px;
+    font-family: "Raleway bold";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+.title_application_2{
+    color:#007CFF;
+    text-align: center;
+    font-size: 23px;
+    font-family: "Raleway bold";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+#application_form{
+    padding: 10px;
+    font-family: "Оснвоной";
+    color:#000000 ;
+    font-size: 15px;
+}
+#application_form li{
+    list-style-type: none;
+}
+
+#application_form label{
+    font-size: 18px;
+}
+
+.input-text{
+    height: 40px;
+    width: 290px;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.input-text::placeholder{
+    font-size: 18px;
+}
+
+#application_form select{
+    height: 40px;
+    width: 290px;
+    margin: 1.5% 0 0 2%;
+    background: inherit;
+    font-size: 18px;
+}
+
+#application_form textarea{
+    width: 595px;
+}
+
+.input-checkbox{
+    height: 20px;
+    width: 20px;
+}
+
+.input-checkbox-text{
+    font-size: 18px;
+}
+
+#button-applecation{
+    display: flex;
+    width: 300px;
+    padding: 13px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #081800;
+    box-shadow: 8px 8px 0px 0px #007CFF;
+
+    color: #FFF;
+    font-size: 15px;
+    font-family: "Raleway bold";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+#button-applecation:hover, #button-applecation:focus,#button-applecation:active{
+    color:#007CFF;
+    
+}
+
+/*  */
+
+#photos {
+    width: 75%;
+    margin: 0 auto;
+    padding: 60px 0 60px 0;
+}
+
+.blue_line{
+    width: 16px;
+    height: 120px;
+    background-color: #007CFF;
+}
+
+.photos_title {
+    display: flex;
+    flex-direction: row;
+    font-family: "Заголовок";
+    color: #000000;
+}
+
+.title_item{
+    padding-top: 38px;
+    padding-left: 20px;
+    color: #0051A7;
+    font-size: 36px;
+    font-family: "Raleway bold";
+
+}
+
+.inner_text{
+    color: #000;
+    text-align: justify;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom: 5%;
+    font-family: "Raleway regular";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-indent: 38px;
+}
+/* ГАЛЕРЕЯ */
+/* -------------------------------------------------------------------------------------------------- */
+
+.galerey-wrapper{
+    padding: 40px;
+}
+
+#slider-photo, .wrap, .slide-content{
+    margin : 0;
+    padding :0;
+    font-family : Arial, Helvetica, sans-serif;
+    width : 100%;
+    height : 70vh;
+    overflow-x : hidden;
+}
+.wrap{
+    position : relative;
+  }
+  
+  .slide{
+    background-size : contain ;
+    background-position : center;
+    background-repeat : no-repeat;
+  }
+  
+  .slide1 {
+    background-image: url("../img/photo_10.jpeg");
+  }
+  .slide2 {
+    background-image: url("../img/photo_2.jpeg");
+  }
+  .slide3 {
+    background-image: url("../img/photo_3.jpeg");
+  }
+
+  .slide4 {
+    background-image: url("../img/photo_4.jpeg");
+  }
+
+  .slide5 {
+    background-image: url("../img/photo_5.jpeg");
+  }
+
+  .slide6 {
+    background-image: url("../img/photo_6.jpeg");
+  }
+
+  .slide7 {
+    background-image: url("../img/photo_7.jpeg");
+  }
+
+  .slide8 {
+    background-image: url("../img/photo_8.jpeg");
+  }
+
+  .slide9 {
+    background-image: url("../img/photo_9.jpeg");
+  }
+
+  
+  
+  .slide-content{
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items:center;
+    text-align : center;
+  }
+  
+  .slide-content span {
+    font-size : 5rem;
+    color : white;
+  }
+  
+  .arrow{
+    cursor : pointer;
+    position : absolute;
+    top :50%;
+    margin-top : -35px;
+    width : 0;
+    height : 0;
+    border-style :solid;
+  }
+  
+  #arrow-left {
+    border-width : 30px 40px 30px 0;
+    border-color : transparent #0051A7 transparent transparent;
+    left:0;
+    margin-left : 30px;
+  }
+  
+  #arrow-right {
+    border-width : 30px 0px 30px 40px;
+    border-color : transparent transparent transparent #0051A7;
+    right:0;
+    margin-right : 30px;
+  }
+/* -------------------------------------------------------------------------------------------------- */
+
+/* контакты */
+.container-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 50px 0;
+}
+/* подвал */
+
+.footer{
+    display: flex;
+    width: 100%;
+
+    background-color:rgba(40, 40, 40, 1);
+}
+.footer .header_menu_logo_footer{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+.header_menu_logo_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.container_footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer_text{
+    color: #FFF;
+    font-family: "Raleway bold";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    font-size: 18px;
+    line-height: 160%;
+    color: #ffffff;
+
+    margin-top: 30px;
+}
+.footer_description{
+    font-family: "Raleway medium";
+    font-size: 18px;
+    line-height: 160%;
+    margin: 15px 10%;
+    color: #ffffff;
+
+}
+
+/*  СТИЛИ СТРАНИЦЫ НВООСТЕЙ */
+/*                          */
+/*                          */ 
+.back_news{
+    width: 68px;
+    height: 68px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.parallax_news{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-image: url(../img/задний\ фон2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.paralax-content-news{
+    height: 80vh;
+}
+.card_news_intro{
+    display: flex;
+    justify-content: end;
+    padding: 60px;
+    margin-top: -30vh;
+}
+@media(max-width:550px) {
+    .card_news_intro{
+        display: block;
+    }
+}
+.cards_text_news{
+    display: flex;
+    flex-direction: column;
+    padding-top: 33px;
+    justify-content:center;
+}
+
+.parallax_news_info{
+    display: flex;
+    justify-content: center;
+    color:#000000;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 40px;
+    margin: 10px auto; 
+}
+.photo_news_intro{
+    width: 250px;
+    height: 250px;
+}
+.text_title_news{
+    color: #000;
+    font-size: 36px;
+    font-family: "Raleway bold";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 0 20px;
+}
+.cards_photo_news{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+@media(max-width:1280px) {
+    .cards_photo_news{
+        display: flex;
+        align-items:start;
+        flex-direction: column;
+    }
+    .photo_news_intro{
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+    .text_title_news{
+        font-size: 26px;
+    }
+}
+@media(max-width:550px) {
+    .cards_photo_news{
+        display: flex;
+        align-items:center;
+        flex-direction: column;
+    }
+    .photo_news_intro{
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+    .text_title_news{
+        font-size: 26px;
+    }
+}
+.data_news_calendar{
+    display: flex;
+    flex-direction: row;
+}
+.calendar{
+    width: 25px;
+    height: 25px;
+}
+.date_news{
+    color: #6C6C6C;
+    font-size: 20px;
+    font-family: "Raleway medium";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding-left: 9px;
+}
+.gallery_news{
+    height: 500px;
+}
+.gallery_news_container{
+    display: flex;
+    justify-content: center;
+
+}
