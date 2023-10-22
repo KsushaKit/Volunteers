@@ -678,6 +678,8 @@ body{
     justify-content:center;
     margin: auto;
 }
+
+
 @media(max-width:710px) {
     .news_cards{
        display: flex;
