@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="./css/unpkg.com_swiper@9.4.1_swiper-bundle.min.css"/>
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- SWIPER -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Профком</title>
+    
+    <title></title>
 </head>
 <body class="col-12">
     <header class="parallax col-12">
@@ -48,11 +47,6 @@
                                         <a href="#types_help" class="header_link">Виды помощи</a> 
                                     </div>
                                 </li>
-                                <!-- <li class="header_item">
-                                    <div class="link_fon">
-                                        <a href="#reviews" class="header_link">Отзывы</a> 
-                                    </div>
-                                </li> -->
                                 <li class="header_item">
                                     <div class="link_fon">
                                         <a href="#contacts" class="header_link">Контакты</a> 
@@ -68,6 +62,8 @@
                         <div class="parallax-conteiner-text">
                             <div class="text_inform col-md-6 col-sm-12">
                                 <p>
+                                    Добровольческий штаб #МЫВМЕСТЕ на базе СГТУ имени Гагарина Ю.А. создан для помощи гражданам, попавшим в тяжёлые жизненные ситуации.
+                                    <p></p>
                                     Иногда помощь приходит оттуда, откуда её не ждешь!
                                     <p></p>
                                     Обратись за помощью!
@@ -78,26 +74,26 @@
                             <div class="application col-md-6 col-sm-12">
                                 <h3 class="title_application">Оставить заявку</h3>
                                 <h3 class="title_application_2">Заявка на помощь</h3>
-                                <form id="application_form" class="guest_request_form">
+                                <form action="./php/application.php" method="POST" id="application_form" class="guest_request_form">
                                     <div class="form-input">
                                         <div>
                                             <label for="Фамилия">Укажите своё имя</label>
-                                            <input class="input-text" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Имя" placeholder="имя" id="name_guest_request" required>
+                                            <input class="input-text" name="name" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Имя" placeholder="имя" id="name_guest_request" required>
                                         </div>
                                         <div>
                                             <label for="Фамилия">Укажите свою фамилию</label>
-                                            <input class="input-text" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Фамилия" id="family_guest_request" placeholder="фамилия" required>
+                                            <input class="input-text" name="surname" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Фамилия" id="family_guest_request" placeholder="фамилия" required>
                                         </div>
                                     </div>
                                     <p></p>
                                     <div class="form-input">
                                         <div style="width: 58%">
                                             <label for="phone">Номер телефона</label>
-                                            <input class="input-text" type="tel" id="phone_guest_request" name="phone"  placeholder="номер телефона" required>
+                                            <input class="input-text" name="phone" type="text" pattern="\+?[0-9\s\-\(\)]+" id="phone_guest_request" name="phone"  placeholder="номер телефона" required>
                                         </div>
                                         <div>
                                             <label for="phone">Вид помощи</label>
-                                            <select>
+                                            <select name="type_of_assistance">
                                                 <option>Адресная</option>
                                                 <option>Гуманитарная</option>
                                                 <option>Психологическая</option>
@@ -107,7 +103,7 @@
                                     <p></p>
                                     <li>
                                         <li><label for="comment">Комментарий:</label></li>
-                                        <li><textarea name="comment" id="comment_body_guest_request" pattern="^[А-Яа-яЁё\s]+$"></textarea></li>
+                                        <li><textarea name="comment" type="text" id="comment_body_guest_request" pattern="^[А-Яа-яЁё\s]+$"></textarea></li>
                                         <li class="input-checkbox-text"><input class="input-checkbox" type="checkbox" name="agree" id="agree_guest_request" required> Согласен на обработку персональных данных</li>
                                     </li> 
                                     <p></p>
@@ -487,7 +483,7 @@
                     <div class="blue_line"></div>
                     <h2 class="title_item">Новости</h2>
                 </div>
-                <p class="inner_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    
                 <div class="news_cards col-md-9 col-sm-12 mb-4">
                     <div class="news_cards_fon col-lg-5 col-md-12 col-sm-12 ">
                         <div class="news_cards_text">
@@ -589,9 +585,13 @@
     </footer>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="./js/unpkg.com_swiper@9.4.1_swiper-bundle.min.js"></script>
-<script src="./js/alert.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/scripts.js"></script>
+<!-- SWIPER -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- SWIPER -->
+<!-- ??галерея комментариев -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<!-- <script src="./js/index.js"></script> -->
+
 </html>
