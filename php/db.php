@@ -11,9 +11,11 @@ $dbname = "volunteers"; // Имя базы данных
 try {
     // Подключение к базе данных
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // Устанавливаем атрибут сообщений об ошибках (выбрасывать исключения)
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Устанавливаем корректную кодировку
     $conn->exec("set names utf8");
-    echo "с подключением збс";
+    // echo "подключение успешно";
 } catch (PDOException $e) {
     // Если есть ошибка соединения, выводим её
     echo "Ошибка!: " . $e->getMessage() . "<br/>";
