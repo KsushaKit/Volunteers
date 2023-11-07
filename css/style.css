@@ -823,6 +823,13 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.logo_vk{
+    height: 45px;
+}
+
+.logo_sstu{
+    height: 30px;
+}
 .container_footer{
     display: flex;
     flex-direction: column;
