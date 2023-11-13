@@ -1,29 +1,96 @@
+@font-face {
+    font-family: 'Raleway regular';
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+    font-family: 'Raleway bold';
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    background-color: #f1efef;
+    font-family: "Raleway regular";
     color: #333;
 }
 
-h1 {
+h1, h2 {
+    margin: 0;
     color: #333;
 }
 
-h2 {
-    color: #333;
+.panel {
+    padding: 30px 20px;
+    background-color: rgb(228 228 228);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.panel-button {
+    position: relative;
+    background-color: inherit;
+    color: rgb(89, 144, 203);
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Raleway Bold";
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.panel-button:hover {
+    color:rgba(0, 97, 199, 1);
+}
+
+.panel-button::after {
+    display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 3px; /*задаём ширину линии*/
+	background-color: rgba(0, 97, 199, 1); /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.panel-button:hover::after {
+    width: 100%;
+}
+
+.content-wrapper {
+    padding: 0 20px;
 }
 
 table {
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
 }
 
-table th, table td {
+table th {
     padding: 10px;
     border: 1px solid #ddd;
 }
 
-button {
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.button-export-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.exportButton, .exportButton1, .exportButton2, .exportButton3 {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -31,9 +98,12 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+.exportButton:hover, .exportButton1:hover, .exportButton2:hover, .exportButton3:hover {
     background-color: #2980b9;
 }
 
