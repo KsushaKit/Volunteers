@@ -245,6 +245,22 @@ body{
     .container-about{
         margin-top: 200px;
     }
+
+    .parallax-conteiner-text {
+        flex-direction: column-reverse;
+    }
+
+    .application {
+        width: 100% !important;
+    }
+
+    .form-input {
+        display: contents;
+    }
+
+    #application_form textarea {
+        width: 85% !important;
+    }
 }
 @media(max-width:380px) {
     .container-about{
