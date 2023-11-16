@@ -179,6 +179,7 @@ body{
 }
 
 .logo_sgtu{
+    width: 110px;
     margin-left: 86px;
 }
 
@@ -193,6 +194,26 @@ body{
     background-color:rgba(217, 217, 217, 0.5) ;
 
 } */
+
+@media(max-width:475px) {
+    .logo_sgtu{
+        margin: 0 !important;
+    }
+}
+
+@media(max-width:400px) {
+
+    .logo_sgtu{
+        margin: 0 !important;
+    }
+}
+
+@media(max-width:380px) {
+
+    .logo_sgtu{
+        margin: 0 !important;
+    }
+}
 
 /*Это всё еще привью  */
 
@@ -263,6 +284,15 @@ body{
     .header_item {
         margin-right: 0px;
     }
+
+    .container-contact {
+        margin: 20px 0;
+    }
+
+    .container-help {
+        margin: 0 !important;
+    }
+
 }
 
 @media(max-width:400px) {
@@ -271,13 +301,30 @@ body{
         height: 1085px;
         padding: 0 5% !important;
     }
+
+    .container-contact {
+        margin: 20px 0;
+    }
+
+    .container-help {
+        margin: 0 !important;
+    }
+
 }
 
 @media(max-width:380px) {
 
     .paralax-content {
-        height: 1085px;
+        height: 1110px;
         padding: 0 5% !important;
+    }
+
+    .container-help {
+        margin: 0 0;
+    }
+
+    .container-help {
+        margin: 0 !important;
     }
 }
 /* форма для заявки */
@@ -498,8 +545,37 @@ body{
     transition: 0.2s ease;
     cursor: pointer;
 }
+@media(max-width:475px) {
+    .logo_sgtu{
+        margin: 0;
+    }
+
+    .parallax_about {
+        padding: 20px 40px;
+    }
+}
+
+@media(max-width:400px) {
+
+    .logo_sgtu{
+        margin: 0;
+    }
+
+    .parallax_about {
+        padding: 20px 40px;
+    }
+}
 
 @media(max-width:380px) {
+
+    .logo_sgtu{
+        margin: 0;
+    }
+
+    .parallax_about {
+        padding: 20px 40px;
+    }
+
     .blue_line{
         width: 16px;
         height: 85px;
@@ -949,6 +1025,24 @@ body{
     margin: 15px 10%;
     color: #ffffff;
 
+}
+
+@media(max-width:475px) {
+    .inner_text {
+        text-align: left;
+    }
+}
+
+@media(max-width:400px) {
+    .inner_text {
+        text-align: left;
+    }
+}
+
+@media(max-width:380px) {
+    .inner_text {
+        text-align: left;
+    }
 }
 
 /*  СТИЛИ СТРАНИЦЫ НВООСТЕЙ */
