@@ -61,6 +61,27 @@ body{
 
 }
 
+@media(max-width:475px) {
+    /* общее */
+
+h1 {
+     font-size: 15px !important;
+}
+
+h2 {
+    font-size: 20px !important;
+}
+
+.blue_line {
+    width: 10px !important; 
+    height: 93px !important;
+}
+
+#about_project, #types_help, #news, #contacts {
+    padding: 20px 40px;
+}
+}
+
 .navbar-expand-md .navbar-collapse {
     justify-content: flex-end;
 }
@@ -211,6 +232,54 @@ body{
         font-size: 14px;
     }
 }
+
+@media(max-width:475px) {
+
+    .paralax-content {
+        height: 115vh;
+        padding: 0 5% !important;
+    }
+
+    .menu_list {
+        flex-wrap: nowrap;
+    }
+
+    .header_link {
+        font-size: 12px;
+    }
+
+    .link_fon {
+        width: 100%;
+    }
+
+    li.header_item { 
+        padding: 0 1%;
+    }
+
+    .parallax-conteiner-title {
+        padding-top: 2%;
+    }
+
+    .header_item {
+        margin-right: 0px;
+    }
+}
+
+@media(max-width:400px) {
+
+    .paralax-content {
+        height: 130vh;
+        padding: 0 5% !important;
+    }
+}
+
+@media(max-width:380px) {
+
+    .paralax-content {
+        height: 160vh;
+        padding: 0 5% !important;
+    }
+}
 /* форма для заявки */
 
 .text_inform{
@@ -242,13 +311,34 @@ body{
     }
 }
 @media(max-width:475px) {
+
+    .application {
+        padding: 2%;
+    }
+
     .container-about{
-        margin-top: 200px;
+        margin-top: 2%;
+    }
+
+    .text_inform {
+        width: 100% !important;
+    }
+    
+    .application {
+        width: 100% !important;
+    }
+
+    .form-input {
+        display: contents;
+    }
+
+    #application_form textarea {
+        width: 85% !important;
     }
 }
 @media(max-width:380px) {
     .container-about{
-        margin-top: 350px;
+        margin-top: 2%;
     }
 }
 .title_application{
@@ -337,10 +427,10 @@ body{
     
 }
 
-/*  */
+/* */
 
 #photos {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     padding: 60px 0;
 }
@@ -475,6 +565,27 @@ body{
     border-color : transparent transparent transparent #0051A7;
     right:0;
     margin-right : 30px;
+  }
+
+  @media(max-width:475px) {
+
+    #photos {
+        margin: 0 5%;
+        width: 50%;
+    }
+    
+    .wrap {
+        width: 150%;
+    }
+
+    .galerey-wrapper {
+        padding: 10px;
+    }
+
+    #slider-photo, .wrap, .slide-content{
+        height: 20vh;
+        width: 80%;
+    }
   }
 /* -------------------------------------------------------------------------------------------------- */
 
