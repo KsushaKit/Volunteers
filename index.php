@@ -13,7 +13,7 @@
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- SWIPER -->
-    
+
     <title>#МЫВМЕСТЕ</title>
 </head>
 <body class="col-12">
@@ -74,7 +74,7 @@
                             <div class="application col-md-6 col-sm-12">
                                 <h3 class="title_application">Оставить заявку</h3>
                                 <h3 class="title_application_2">Заявка на помощь</h3>
-                                <form action="./php/applicationInsertData.php" method="POST" id="application_form" class="guest_request_form">
+                                <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" id="application_form" class="guest_request_form">
                                     <div class="form-input">
                                         <div>
                                             <label for="Фамилия">Укажите своё имя</label>
@@ -104,15 +104,15 @@
                                     <li>
                                         <li><label for="comment">Комментарий:</label></li>
                                         <li><textarea name="comment" type="text" id="comment_body_guest_request" pattern="^[А-Яа-яЁё\s]+$"></textarea></li>
-                                        <li class="input-checkbox-text"><input class="input-checkbox" type="checkbox" name="agree" id="agree_guest_request" required> Согласен на обработку персональных данных</li>
+                                        <li class="input-checkbox-text"><input class="input-checkbox" type="checkbox" name="agree" id="agree_guest_request" required> Согласен на обработку <a href="./documents/politika.pdf">персональных данных</a></li>
                                     </li> 
                                     <p></p>
                                     <li>
                                         <button type="submit" id="button-applecation" class="col-md-3 col-sm-12">Оставить заявку</button>
-                                    </li>     
+                                    </li>
+
                                 </form>
                             </div>
-
 
                         </div>    
                     </div>
@@ -600,11 +600,52 @@
 
 <!-- SWIPER -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<!-- SWIPER -->
+
 <!-- ??галерея комментариев -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Прочие скрипты -->
 <script src="./js/scripts.js"></script>
-<script src="./js/index.js"></script>
-<!-- Меню -->
+
+<!-- Бургер-меню -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
 </html>
+
+<!-- ОТПРАВКА ДАННЫХ ИЗ ФОРМЫ -->
+<?php
+
+    // Проверяем, была ли отправлена форма
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        // Подключение к базе данных
+        require './php/db.php';
+        // Получение данных из HTML-формы
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $phone = $_POST['phone'];
+        $type_of_assistance = $_POST['type_of_assistance'];
+        $comment = $_POST['comment'];
+        $date = date("d-m-Y H:i");
+            
+        if ($name!= null) {
+            try {
+                
+                if ($comment == null ) $comment = 'Без комментария.';
+
+                $sql = "INSERT INTO applications (name, surname, phone, type_of_assistance, comment, date)
+                        VALUES ('$name', '$surname', '$phone', '$type_of_assistance', '$comment', '$date')";
+                $conn->exec($sql);
+                
+                echo '<script>alert("Заявка отправлена")</script>';
+
+            } catch(PDOException $e) {
+                echo '<script>alert("Заявка не отправлена, повторите позже")</script>';
+            }
+        }
+
+        $conn = null;
+        die();
+    }
+   
+?>

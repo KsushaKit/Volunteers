@@ -90,7 +90,7 @@ table td {
     align-items: end;
 }
 
-.exportButton, .exportButton1, .exportButton2, .exportButton3 {
+.exportButton, .exportButton1, .exportButton2, .exportButton3, .exportButton4 {
     background-color: #3498db;
     color: #fff;
     border: none;

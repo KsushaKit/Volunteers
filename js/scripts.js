@@ -56,7 +56,7 @@ window.onclick = function(el) {
 }
 
 //3 слайдера в модальных окне
-//!!!ПЕРЕЛИСТЫВАЮТСЯ ВСЕ СЛАЙДЕРЫ ОДНОВРЕМЕННО
+//!!!
 var swiper = new Swiper(".slider1", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -78,7 +78,25 @@ var swiper = new Swiper(".slider3", {
     },
 });
 
+// активация кнопки отправки заявки
+const agreementCheckbox = document.getElementById('agree_guest_request');
+const submitButton = document.getElementById('button-applecation');
 
+//кнопка по умолчанию отключена
+if (!agreementCheckbox.checked) {
+    submitButton.classList.add('disabled');
+}
+
+// при изменении чекбокса если галочка есть, то кнопка включена
+agreementCheckbox.addEventListener('change', function() {
+    if (!agreementCheckbox.checked) {
+        submitButton.classList.add('disabled');
+    }
+    else {
+        submitButton.classList.remove('disabled', agreementCheckbox.checked);
+    } 
+    
+});
 
 
 

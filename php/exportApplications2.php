@@ -13,7 +13,7 @@ try {
     $spreadsheet = new Spreadsheet();
 
     // Выполнение SQL-запроса и получение данных из базы данных
-    $sql = "SELECT * FROM applications WHERE type_of_assistance LIKE 'Гуманитарная'";
+    $sql = "SELECT name, surname, phone, type_of_assistance, comment, date FROM applications WHERE type_of_assistance LIKE 'Гуманитарная'";
     $stmt = $conn->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

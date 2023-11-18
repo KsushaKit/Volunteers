@@ -443,6 +443,12 @@ h2 {
     
 }
 
+/* класс отключения кнопки */
+#button-applecation.disabled {
+    cursor:default;
+    color: #FFF;
+}
+
 /* */
 
 #photos {
