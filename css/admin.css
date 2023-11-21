@@ -7,6 +7,7 @@
     src: url("../fonts/Raleway-Bold.ttf");
 }
 
+
 body {
     background-color: #f1efef;
     font-family: "Raleway regular";
@@ -109,4 +110,105 @@ table td {
 
 .tab {
     display: none;
+}
+
+/* форма добавления админимтратора */
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+}
+#signUpForm {
+    padding: 20px;
+}
+
+#logbox {
+    margin: 75px auto;
+    width: 465px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+}
+
+#signUpForm h1 {
+    text-align: center;
+    font-size: 175%;
+    color: #757575;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#signUpForm::placeholder{
+    font-size: 20px;
+}
+
+#signUpForm a {
+    text-decoration: none;
+    text-align: center;
+    color: #757575;
+    display: block;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+    border: none;
+}
+
+#signUpForm a:hover {
+    color: rgb(89, 144, 203);
+}
+
+#signUpForm .input {
+    font-size: 20px;
+    width: 75%;
+    height: 50px;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+}
+
+#signUpForm .input:focus {
+    outline: none;
+    border-bottom-color: rgb(89, 144, 203) !important;
+}
+
+#signUpForm .input:hover {
+    border-bottom-color: #dcdcdc;
+}
+
+#signUpForm .input:invalid {
+    box-shadow: none;
+}
+
+.pass:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.inputButton {
+    position: relative;
+    width: 85%;
+    height: 50px;
+    display: block;
+    margin: 30px auto 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(89, 144, 203);
+    border: none;
+    box-shadow: 0 5px 0 rgb(70, 113, 160);
+    cursor: pointer;
+}
+
+.inputButton:hover {
+    top: 2px;
+    box-shadow: 0 3px 0 rgb(70, 113, 160);
+}
+
+.inputButton:active {
+    top: 5px;
+    box-shadow: none;
+}
+
+.inputButton:focus {
+    outline: none;
 }

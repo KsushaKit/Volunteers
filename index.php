@@ -631,7 +631,7 @@
         if ($name!= null) {
             try {
                 
-                if ($comment == null ) $comment = 'Без комментария.';
+                if ($comment == null ) $comment = 'Без комментария';
 
                 $sql = "INSERT INTO applications (name, surname, phone, type_of_assistance, comment, date)
                         VALUES ('$name', '$surname', '$phone', '$type_of_assistance', '$comment', '$date')";
@@ -640,7 +640,7 @@
                 echo '<script>alert("Заявка отправлена")</script>';
 
             } catch(PDOException $e) {
-                echo '<script>alert("Заявка не отправлена, повторите позже")</script>';
+                echo '<script>alert("Что-то пошло не так...")</script>';
             }
         }
 

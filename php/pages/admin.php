@@ -1,6 +1,13 @@
-<!-- Получение данных (заявок) -->
 <?php 
-    include "../applicationGetData.php";
+    // Получаем текущий URL
+    $currentURL = $_SERVER['REQUEST_URI'];
+
+    // Проверяем, содержит ли URL строку "admin"
+    if (strpos($currentURL, 'admin') !== false) {
+        // Выполняем переадресацию на страницу с логином
+        header('Location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -79,9 +86,15 @@
                 <button class="panel-button" onclick="openTab('type2')">Гуманитарная</button>
                 <button class="panel-button" onclick="openTab('type3')">Психологическая</button>
                 <button class="panel-button" onclick="openTab('type4')">Выполненные</button>
+
+                <button class="panel-button" onclick="openTab('type5')">Добавить администратора</button>
             </div>
         </div>
 
+    <!-- Получение данных (заявок) -->
+    <?php 
+        include "../applicationGetData.php";
+    ?>
     <div class="content-wrapper">
 
         <!-- Все заявки -->
@@ -289,6 +302,52 @@
         <?php endif; ?>
         </div>
 
+        <!-- Добавление админа -->
+        <div id="type5" class="tab">
+            <div class="container">
+                <div id="logbox">
+                    <form id="signUpForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+                        <h1>Добавление администратора</h1>
+                        <input name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" class="input pass" required>
+                        <input name="password" type="password" placeholder="Пароль" required class="input pass" required>
+                        <input type="submit" value="Добавить" class="inputButton">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <?php
+        //ОТПРАВКА ДАННЫХ ИЗ ФОРМЫ
+        // Проверяем, была ли отправлена форма
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['email']!==null) {
+            require '../db.php';
+        
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            
+            if ($email != null && $password != null) {
+                $stmt = $conn->prepare("SELECT email FROM admins WHERE email = :email");
+                $stmt->bindParam(':email', $email);
+                $stmt->execute();
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+                if ($row) {
+                    echo '<script>alert("Пользователь с таким email уже существует")</script>';
+                } else {
+                    try {
+                        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                        $insertStmt = $conn->prepare("INSERT INTO admins (email, password) VALUES (:email, :password)");
+                        $insertStmt->bindParam(':email', $email);
+                        $insertStmt->bindParam(':password', $hashedPassword);
+                        $insertStmt->execute();
+                        echo '<script>alert("Пользователь добавлен")</script>';
+                    } catch(PDOException $e) {
+                        echo '<script>alert("Не удалось добавить пользователя")</script>';
+                    }
+                }
+            }
+        }
+        ?>
 
     </div>
 
