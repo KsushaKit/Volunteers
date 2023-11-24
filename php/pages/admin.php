@@ -1,10 +1,7 @@
 <?php 
-    // Получаем текущий URL
-    $currentURL = $_SERVER['REQUEST_URI'];
-
-    // Проверяем, содержит ли URL строку "admin"
-    if (strpos($currentURL, 'admin') !== false) {
-        // Выполняем переадресацию на страницу с логином
+    session_start();
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+        // Пользователь не аутентифицирован, перенаправляем на страницу логина
         header('Location: login.php');
         exit;
     }

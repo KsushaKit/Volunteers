@@ -16,7 +16,7 @@
         <h1>Восстановление пароля</h1>
         <input name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" class="input pass" required>
         <input type="submit" value="Восстановить пароль" class="inputButton">
-        <a href="form.php" class="restore-pass" role="button">Вернуться назад</a>
+        <a href="login.php" class="restore-pass" role="button">Вернуться назад</a>
       </form>
     </div>
   </div>

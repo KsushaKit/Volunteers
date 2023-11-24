@@ -44,6 +44,8 @@
           $hashedPassword = $row['password'];
           // Сравнение введенного пароля с хэшированным паролем из базы данных
           if (password_verify($password, $hashedPassword)) {
+            session_start();
+            $_SESSION['logged_in'] = true;
             header('Location: admin.php');
             exit();
           } else {
