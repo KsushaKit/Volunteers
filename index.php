@@ -492,32 +492,30 @@
 
                     <div class="news_cards_fon col-lg-5 col-md-12 col-sm-12 ">
                         <div class="news_cards_text">
-                            <div class="news_cards_photo"><img class="photo_news"src="./img/новость1.jpg" alt="новость1"></div>
-                            <div class="news_text_title">День России</div>
+                            <div class="news_cards_photo1"></div>
+                            <div class="news_text_title">Самый-самый</div>
                             <div class="button_card">
-                                <div class="news_text_item">Надпись поменьше</div>
-                                <a href="./news.html" class="button_card_disign"><img src="./img/strela.png" alt=""></a>
-                            </div>     
+                                <a href="php/pages/news.php?id=2" class="button_card_disign"><img src="./img/strela.png" alt=""></a> 
+                            </div>    
                         </div>     
                     </div>  
                     <div class="news_cards_fon col-lg-5 col-md-12 col-sm-12">
                         <div class="news_cards_text">
-                            <div class="news_cards_photo"><img class="photo_news" src="./img/новость2.jpg" alt="новость2"></div>
-                            <div class="news_text_title">День молодёжи</div>
+                            <div class="news_cards_photo2"></div>
+                            <div class="news_text_title">Мы вместе</div>
                             <div class="button_card">
-                                <div class="news_text_item">Надпись поменьше</div>
-                                <a href="./news.html" class="button_card_disign"><img src="./img/strela.png" alt=""></a>
+                                <a href="php/pages/news.php?id=3" class="button_card_disign"><img src="./img/strela.png" alt=""></a>
                             </div>     
                         </div>       
                     </div>  
                     <div class="news_cards_fon col-lg-5 col-md-12 col-sm-12">
                         <div class="news_cards_text">
-                            <div class="news_cards_photo"><img class="photo_news" src="./img/новость3.jpg"alt="новость3"></div>
-                            <div class="news_text_title">Стипендия раньше</div>
+                            <div class="news_cards_photo3"></div>
+                            <div class="news_text_title">Активисты Волонтёрского...</div>
                             <div class="button_card">
-                                <div class="news_text_item">Надпись поменьше</div>
-                                <a href="./news.html" class="button_card_disign"><img src="./img/strela.png" alt=""></a>
-                            </div>     
+                                <a href="php/pages/news.php?id=4" class="button_card_disign"><img src="./img/strela.png" alt=""></a>
+                            </div>
+                                 
                         </div>
                     </div>  
 

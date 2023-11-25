@@ -506,7 +506,6 @@ body{
 .about_title{
     display: flex;
     flex-direction: row;
- 
     font-family: "Заголовок";
     color: #000000;
 }
@@ -565,6 +564,7 @@ body{
     .parallax_about {
         padding: 20px 40px;
     }
+
 }
 
 @media(max-width:400px) {
@@ -928,7 +928,7 @@ body{
 .news_cards_text{
     display: flex;
     flex-direction: column;
-    padding-top: 33px;
+    padding: 30px 20px 20px 30px;
     justify-content:center;
 }
 .news_cards_photo{
@@ -955,7 +955,7 @@ body{
 .news_text_title{
     color: #000000;
     font-family: "Raleway bold";
-    font-size: 24px;;
+    font-size: 15px;;
     font-style: normal;
     font-weight: 700;
     line-height: 36px;
@@ -969,9 +969,32 @@ body{
     line-height: 36px;
     padding-left: 33px;
 }
+
+.news_cards_photo1 {
+    height: 200px;
+    width: 270px;
+    background-size: contain;
+    background-image: url(../img/news/news1.jpg);
+}
+
+.news_cards_photo2 {
+    height: 200px;
+    width: 270px;
+    background-size: cover;
+    background-image: url(../img/news/news2.jpg);
+}
+
+.news_cards_photo3 {
+    height: 200px;
+    width: 270px;
+    background-size: cover;
+    background-image: url(../img/news/news3.jpg);
+}
+
 .button_card{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 0 10px;
 }
 .button_card_disign{
     margin: 12px;

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="../css/alert.css">
   <link rel="stylesheet" href="../css/request.css">
   <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="./css/unpkg.com_swiper@9.4.1_swiper-bundle.min.css"/>
 
   <!-- SWIPER -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -19,7 +18,7 @@
   <!-- SWIPER -->
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <title>Профком</title>
+  <title>#МЫВМЕСТЕ</title>
 
 </head>
 
@@ -58,19 +57,19 @@
 
                 <li class="header_item">
                   <div class="link_fon">
-                    <a href="../index.html#about_project" class="header_link">О проекте</a> 
+                    <a href="../index.php#about_project" class="header_link">О проекте</a> 
                   </div>
                 </li>
 
                 <li class="header_item">
                   <div class="link_fon">
-                    <a href="../index.html#types_help" class="header_link">Виды помощи</a> 
+                    <a href="../index.php#types_help" class="header_link">Виды помощи</a> 
                   </div>
                 </li>
 
                 <li class="header_item">
                   <div class="link_fon">
-                    <a href="../index.html#contacts" class="header_link">Контакты</a> 
+                    <a href="../index.php#contacts" class="header_link">Контакты</a> 
                   </div>
                 </li>
 
@@ -94,64 +93,8 @@
                     Добровольческий штаб #МЫВМЕСТЕ на базе СГТУ имени Гагарина Ю.А. создан для помощи гражданам, попавшим в тяжёлые жизненные ситуации.
                   <p></p>
                     Иногда помощь приходит оттуда, откуда её не ждешь!
-                  <p></p>
-                    Обратись за помощью!
-                  </p>
+                  <p>
                 </div>
-
-                  <!-- ФОРМА ЗАЯВКИ -->
-              <div class="application col-md-6 col-sm-12">
-
-                <h3 class="title_application">Оставить заявку</h3>
-                <h3 class="title_application_2">Заявка на помощь</h3>
-
-                <form action="../php/applicationInsertData.php" method="POST" id="application_form" class="guest_request_form">
-
-                  <div class="form-input">
-                    <div>
-                      <label for="Фамилия">Укажите своё имя</label>
-                      <input class="input-text" name="name" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Имя" placeholder="имя" id="name_guest_request" required>
-                    </div>
-                    <div>
-                      <label for="Фамилия">Укажите свою фамилию</label>
-                      <input class="input-text" name="surname" type="text"  pattern="^[А-Яа-яЁё\s]+$" name="Фамилия" id="family_guest_request" placeholder="фамилия" required>
-                    </div>
-                  </div>
-
-                  <p></p>
-
-                  <div class="form-input">
-                    <div style="width: 58%">
-                      <label for="phone">Номер телефона</label>
-                      <input class="input-text" name="phone" type="text" pattern="\+?[0-9\s\-\(\)]+" id="phone_guest_request" name="phone"  placeholder="номер телефона" required>
-                    </div>
-                    <div>
-                      <label for="phone">Вид помощи</label>
-                      <select name="type_of_assistance">
-                        <option>Адресная</option>
-                        <option>Гуманитарная</option>
-                        <option>Психологическая</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <p></p>
-
-                  <li>
-                    <li><label for="comment">Комментарий:</label></li>
-                    <li><textarea name="comment" type="text" id="comment_body_guest_request" pattern="^[А-Яа-яЁё\s]+$"></textarea></li>
-                    <li class="input-checkbox-text"><input class="input-checkbox" type="checkbox" name="agree" id="agree_guest_request" required> Согласен на обработку персональных данных</li>
-                  </li> 
-
-                  <p></p>
-
-                  <li>
-                  <button type="submit" id="button-applecation" class="col-md-3 col-sm-12">Оставить заявку</button>
-                  </li>  
-
-                </form>
-              </div>
-
             </div>    
           </div>
         </div>
@@ -238,7 +181,7 @@
             <div id="arrow-right" class="arrow"></div>
           </div>
       </div>
-
+      <a class="back" href="../../index.php#about_project">На главную</a>
     </section>
     
     
